@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% block css %}
+
+    <style type="text/css">
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            float: left;
+        }
+
+        .rating > span {
+            display: inline-block;
+            position: relative;
+            width: 1.1em;
+        }
+
+        .rating > span:hover:before,
+        .rating > span:hover ~ span:before,
+        .rating > span.active:before,
+        .rating > span.active ~ span:before{
+            content: "\2605";
+            position: absolute;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+
+    <main id="dashboard_ejecutivo">
+        <div class="container">
+
+
+            <h1>Lista de personas que quieren un crédito</h1>
+
+            <div class="row"><a href="{% url 'dashboard_ejecutivo_single' %}">
+                <div class="col s12 m12 l12">
+                    <div class="card horizontal">
+                        <div class="col s12 m12 l3">
+                            <div class="card-image">
+                                <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/15740915_10211086403497545_136717097584119102_n.jpg?oh=08dda9777f4dd278f495c57fcc61690c&oe=5A08FFDF">
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l3">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <h5>Dario Muñoz</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l3">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <h5>Producto</h5>
+                                    <p>Viaje de $1.000.000 a 12 cuotas</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l3">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <h5>Calificaci&oacute;n</h5>
+                                    <div class="rating">
+                                        <span>☆</span><span>☆</span><span class="active">☆</span><span>☆</span><span>☆</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div></a>
+            </div>
+
+
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="card horizontal">
+                        <div class="col s12 m12 l3">
+                            <div class="card-image">
+                                <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/1505484_10152294050452754_1368163305_n.jpg?oh=46d6aed41a1ba1a49fd63f18be78ce9f&oe=5A0D6247">
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l3">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <h5>Rodrigo Garcia</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l3">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <h5>Producto</h5>
+                                    <p>Viaje de $2.000.000 a 12 cuotas</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l3">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <h5>Calificaci&oacute;n</h5>
+                                    <div class="rating">
+                                        <span>☆</span><span class="active">☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="card horizontal">
+                        <div class="col s12 m12 l3">
+                            <div class="card-image">
+                                <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/12662636_10206786053502376_3179932115307222115_n.jpg?oh=4ba0bb101ac1b47678c2b7de474819a9&oe=5A0D71A2">
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l3">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <h5>Luis Fuentes</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l3">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <h5>Producto</h5>
+                                    <p>Viaje de $1.000.000 a 12 cuotas</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l3">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <h5>Calificaci&oacute;n</h5>
+                                    <div class="rating">
+                                        <span>☆</span><span>☆</span><span>☆</span><span class="active">☆</span><span>☆</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="card horizontal">
+                        <div class="col s12 m12 l3">
+                            <div class="card-image">
+                                <img src="https://scontent.xx.fbcdn.net/v/t1.0-9/19399411_10211231278311460_2608583548369405107_n.jpg?oh=9846601b0da1fdc4cde69bface4ecdd7&oe=59F38170">
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l3">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <h5>Gabriel Lagrotteria</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l3">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <h5>Producto</h5>
+                                    <p>Viaje de $3.000.000 a 12 cuotas</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l3">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <h5>Calificaci&oacute;n</h5>
+                                    <div class="rating">
+                                        <span class="active">☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </main>
+
+
+{% endblock %}

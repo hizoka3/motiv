@@ -1,0 +1,85 @@
+
+body{
+    font-size: 100%;
+}
+
+
+nav{
+    background-color: #7e00ff;
+}
+.brand-logo{
+    font-weight: 800;
+}
+#login{
+    margin-top: 50px;
+}
+#login .btn{
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    height: 50px;
+    line-height: 50px;
+}
+#login h1{
+    font-size: 2.3rem;
+    text-align: center;
+    margin: 0 0 20px;
+}
+#login > div{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.documentos > div{
+    padding: 15px 0 !important;
+    font-size: 16px;
+    border-bottom: 1px solid #bebebe;
+}
+.documentos > div:last-child{
+    border-bottom: none;
+}
+.documentos > div p{
+    display: inline-block;
+    float: left;
+    margin: 0;
+}
+.documentos > div a{
+    display: inline-block;
+    float: right;
+}
+
+#dashboard_ejecutivo h1{
+    font-size: 3.5rem;
+}
+#dashboard_ejecutivo h2{
+    font-size: 2.5rem;
+}
+#dashboard_ejecutivo a{
+    color: inherit;
+}
+
+#dashboard_ejecutivo ul li{
+    padding: 5px 0;
+}
+#dashboard_ejecutivo ul li a{
+    color: #7e00ff;
+}
+
+@media only screen and (max-width: 600px){
+
+    #login > div{
+        position: relative;
+        left: inherit;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+    }
+}

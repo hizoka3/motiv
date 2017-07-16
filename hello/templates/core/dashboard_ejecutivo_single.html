@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block css %}
+
+    <style type="text/css">
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            float: left;
+        }
+
+        .rating > span {
+            display: inline-block;
+            position: relative;
+            width: 1.1em;
+        }
+
+        .rating > span:hover:before,
+        .rating > span:hover ~ span:before,
+        .rating > span.active:before,
+        .rating > span.active ~ span:before{
+            content: "\2605";
+            position: absolute;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+
+    <main id="dashboard_ejecutivo">
+        <div class="container">
+
+
+            <h1>Detalle de usuario</h1>
+
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="card horizontal">
+                        <div class="col s12 m12 l3">
+                            <div class="card-image">
+                                <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/15740915_10211086403497545_136717097584119102_n.jpg?oh=08dda9777f4dd278f495c57fcc61690c&oe=5A08FFDF">
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l3">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <h5>Dario Muñoz</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l3">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <h5>Producto</h5>
+                                    <p>Viaje de $1.000.000 a 12 cuotas</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l3">
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <h5>Calificaci&oacute;n</h5>
+                                    <div class="rating">
+                                        <span>☆</span><span>☆</span><span class="active">☆</span><span>☆</span><span>☆</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col m6">
+                    <h2>Información personal</h2>
+                    <ul>
+                        <li>Nombre: Dario Muñoz</li>
+                        <li>Rut: 18.667.4499</li>
+                        <li class="divider"></li>
+                        <li>Producto: Viaje de $1.000.000 a 12 cuotas</li>
+                        <li>Tasa: 2.15%</li>
+                        <li>Monto total: $1.046.084</li>
+                    </ul>
+                </div>
+                <div class="col m6">
+                    <h2>Documentos</h2>
+
+                    <ul>
+                        <li><a href="https://scontent.xx.fbcdn.net/v/t34.0-12/20134783_10212982175010648_454052789_n.jpg?_nc_ad=z-m&oh=223b7373fef43ea11866f84bb4216c69&oe=596D69EA" target="_blank">Foto Carnet de Identidad frontal</a></li>
+                        <li><a href="https://scontent.xx.fbcdn.net/v/t34.0-12/20158256_10212982177090700_990527608_n.jpg?_nc_ad=z-m&oh=b5b0f22b0fcfe756577821fc0fe4b136&oe=596D7FDB" target="_blank">Foto Carnet de Identidad trasera</a></li>
+                        <li><a href="https://scontent.xx.fbcdn.net/v/t34.0-12/20158181_10211473092395419_2125530858_n.jpg?_nc_ad=z-m&oh=9219392ecea9652c098f7c32e5964bc8&oe=596D953C" target="_blank">Foto Liquidación de sueldo</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+
+{% endblock %}

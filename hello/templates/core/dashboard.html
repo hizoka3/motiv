@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<main>
+  <div class="container">
+    <div class="row">
+
+      <div class="col m6 s12">
+        <div class="imgPerfil">
+          <img src="{{ user.fotoPerfil }}" alt="">
+        </div>
+        <div class="nombre">
+          <p>{{ user.nombre }} {{ user.apellido }}</p>
+          <p>Rut: {{ user.rut }}</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="row">
+      <h1>Mis documentos:</h1>
+
+      <div class="row documentos">
+        <div class="col s12">
+          <p>Fotocopia de Carnet de Identidad</p>
+          <a href="#" class="btn">Subir Archivo</a>
+        </div>
+        <div class="col s12">
+          <p>Últimas 3 liquidaciones (6 si eres independiente)</p>
+          <a href="#" class="btn">Subir Archivos</a>
+        </div>
+        <div class="col s12">
+          <p>Últimas 12 cotizaciones de AFP</p>
+          <a href="#" class="btn">Subir Archivos</a>
+        </div>
+        <div class="col s12">
+          <p>Estado de cuenta (luz, agua o certificado de residencia)</p>
+          <a href="#" class="btn">Subir Archivos</a>
+        </div>
+        <div class="col s12">
+          <p>Fotocopia título profesional legalizado</p>
+          <a href="#" class="btn">Subir Archivos</a>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+</main>
+{% endblock %}

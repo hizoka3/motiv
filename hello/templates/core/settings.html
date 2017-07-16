@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Configuración</h2>
+
+  <h3>Twitter</h3>
+  {% if twitter_login %}
+    <p>Conectado como <a href="https://twitter.com/{{ twitter_login.extra_data.access_token.screen_name }}/" target="_blank">@{{ twitter_login.extra_data.access_token.screen_name }}</a></p>
+    {% if can_disconnect %}
+      <form method="post" action="{% url 'social:disconnect' 'twitter' %}">
+        {% csrf_token %}
+        <button type="submit">Desconectarse de Twitter</button>
+      </form>
+    {% else %}
+      <button type="button" disabled>Desconectarse de Twitter</button>
+      <p style="color: red">Debes <a href="{% url 'password' %}">definir una password</a> para tu cuenta antes de desconectarse de Twitter.</p>
+    {% endif %}
+  {% else %}
+    <a href="{% url 'social:begin' 'twitter' %}">Conectar Twitter</a>
+  {% endif %}
+
+  <h3>Facebook</h3>
+  {% if facebook_login %}
+    <p>Conectado como <a href="https://facebook.com/{{ facebook_login.extra_data.id }}/" target="_blank">{{ facebook_login.extra_data.id }}</a></p>
+    {% if can_disconnect %}
+      <form method="post" action="{% url 'social:disconnect' 'facebook' %}">
+        {% csrf_token %}
+        <button type="submit">Desconectarse de  Facebook</button>
+      </form>
+    {% else %}
+      <button type="button" disabled>Desconectarse de  Facebook</button>
+      <p style="color: red">Debes <a href="{% url 'password' %}">definir una password</a> para tu cuenta antes de desconectarse de Facebook.</p>
+    {% endif %}
+  {% else %}
+    <a href="{% url 'social:begin' 'facebook' %}">Conectar Facebook</a>
+  {% endif %}
+
+{% endblock %}

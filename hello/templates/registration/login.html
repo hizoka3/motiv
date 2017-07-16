@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main>
+  <div class="container">
+    <div class="row" id="login">
+      <div class="col m3 s12">
+        <h1>Ingresa</h1>
+
+        <a href="{% url 'social:begin' 'linkedin-oauth2' %}" class="waves-effect waves-light btn blue darken-2"><i class="fa fa-linkedin" aria-hidden="true"></i> LINKEDIN</a>
+        <a href="{% url 'social:begin' 'facebook' %}" class="waves-effect waves-light btn indigo darken-4"><i class="fa fa-facebook" aria-hidden="true"></i> FACEBOOK</a>
+        <a href="{% url 'social:begin' 'twitter' %}" class="waves-effect waves-light btn light-blue"><i class="fa fa-twitter" aria-hidden="true"></i> TWITTER</a>
+        <a href="#" class="waves-effect waves-light btn red darken-3"><i class="fa fa-google-plus" aria-hidden="true"></i> GOOGLE +</a>
+        <a href="#" class="waves-effect waves-light btn brown lighten-3"><i class="fa fa-instagram" aria-hidden="true"></i> INSTAGRAM +</a>
+
+      </div>
+    </div>
+
+  </div>
+</main>
+
+{% endblock %}
